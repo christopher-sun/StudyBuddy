@@ -5,6 +5,7 @@ import MapContainer from './MapContainer'
 import { Button } from 'react-bootstrap';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
@@ -14,10 +15,14 @@ class App extends Component {
         </header>
         <div class="container-fluid">
                 <MapContainer/>
-                <Button>Create Study Spot</Button>
+                <Button onClick={this.createStudySpot}>Create Study Spot</Button>
         </div>
       </div>
     );
+  }
+  
+  createStudySpot() {
+      console.log('click')
   }
 }
 
